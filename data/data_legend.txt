@@ -1,0 +1,14 @@
+Legend of variables for the simulated longitudinal dataset contained in the file 'fake_data.csv'
+
+id = 	patient's ID (index i=1,...,N)
+X1 = 	continuous baseline covariate
+X2 = 	dichotomous baseline covariate
+X3 = 	dichotomous baseline covariate
+X4 = 	dichotomous baseline covariate
+cycle = treatment cycle index (index j=1,...,J)
+tstart = start of the survival follow-up interval corresponding to cycle j
+tstop =  end of the survival follow-up interval corresponding to cycle j
+event =  dichotomous variable indicating whether the patient experienced the event of interest (1) or not (0) during the considered interval
+M = 	last observed treatment cycle; M=J indicates completion of all treatment cycles, whereas M<J indicates treatment dropout
+A = 	dichotomous treatment-modification indicator, with A=1 indicating treatment adjustment and A=0 indicating no treatment adjustment at cycle j
+Y1--Y8 = binary longitudinal response variables representing observed manifestations of the underlying latent condition at cycle j
