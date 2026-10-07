@@ -1,8 +1,10 @@
+
 library(dplyr)
 library(ggplot2)
 library(tidyr)
 
-setwd("~/github/lmm-ipw")
+# Set the working directory to the root of this repository before running the script
+dir.create("results/figures", recursive = TRUE, showWarnings = FALSE)
 
 long_dat = read.csv2("data/fake_data.csv")
 head(long_dat)

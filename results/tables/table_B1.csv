@@ -1,0 +1,15 @@
+"step","model","k","np","lk","AIC","BIC"
+"Selection of k","Initial: A | Transition: A",1,8,-10288.81,20593.62,20627.34
+"Selection of k","Initial: A | Transition: A",2,22,-9237.13,18518.25,18610.97
+"Selection of k","Initial: A | Transition: A",3,40,-9226.13,18532.27,18700.85
+"Selection of k","Initial: A | Transition: A",4,62,-9220.06,18564.11,18825.42
+"Selection of k","Initial: A | Transition: A",5,88,-9208.38,18592.77,18963.65
+"Selection of k","Initial: A | Transition: A",6,118,-9205.85,18647.7,19145.02
+"Forward selection - step 1","Initial: X1 + A | Transition: A",2,23,-9234.65,18515.3,18612.23
+"Forward selection - step 1","Initial: X2 + A | Transition: A",2,23,-9237.23,18520.46,18617.4
+"Forward selection - step 1","Initial: X3 + A | Transition: A",2,23,-9236.64,18519.29,18616.23
+"Forward selection - step 1","Initial: X4 + A | Transition: A",2,23,-9236.66,18519.33,18616.27
+"Forward selection - step 1","Initial: A | Transition: X1 + A",2,24,-9238.3,18524.61,18625.76
+"Forward selection - step 1","Initial: A | Transition: X2 + A",2,24,-9235.02,18518.04,18619.19
+"Forward selection - step 1","Initial: A | Transition: X3 + A",2,24,-9235.18,18518.36,18619.51
+"Forward selection - step 1","Initial: A | Transition: X4 + A",2,24,-9236.37,18520.75,18621.9

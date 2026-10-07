@@ -1,0 +1,7 @@
+"part","row","state_1","state_2"
+"Initial probabilities: logit parameters (SE)","(Intercept)",,"1.086 (0.168)"
+"Initial probabilities: logit parameters (SE)","A",,"0.333 (0.473)"
+"Transition probabilities: A = 0","from state 1","0.676","0.324"
+"Transition probabilities: A = 0","from state 2","0.457","0.543"
+"Transition probabilities: A = 1","from state 1","0.374","0.626"
+"Transition probabilities: A = 1","from state 2","0.349","0.651"
