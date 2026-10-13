@@ -123,3 +123,45 @@ transition_matrix <- function(fit, lmm_data, a){
   dimnames(Pi) <- list(from = 1:fit$k, to = 1:fit$k)
   Pi
 }
+
+
+# Function term_labels() returns readable labels of the covariates affecting the initial probabilities.
+term_labels <- function(terms, latex = FALSE){
+  labels <- terms
+  labels[terms == "(Intercept)"] <- "Intercept"
+  labels[terms == "A"] <- if(latex) "Initial treatment $A_{\\bullet 1}$" else "Initial treatment A_.1"
+  labels
+}
+
+
+# Function latex_table_1() returns the LaTeX code (booktabs) of Table 1, given
+#   - Be: matrix of the regression parameters of the initial probabilities (covariates x states);
+#   - Pi: list of the transition probability matrices when A = 0 and A = 1.
+latex_table_1 <- function(Be, Pi){
+  k <- ncol(Be)
+  nc <- k + 2
+  fmt <- function(x) sprintf("%.2f", x)
+  row <- function(...) paste(paste(c(...), collapse = " & "), "\\\\")
+  c("\\begin{table}[ht]",
+    "\\centering",
+    "\\caption{Estimated regression parameters affecting the distribution of the initial probabilities and estimated transition probabilities.}",
+    paste0("\\begin{tabular}{ll", strrep("c", k), "}"),
+    "\\toprule",
+    paste0("\\multicolumn{", nc, "}{l}{\\textbf{Regression parameters for initial probabilities}} \\\\"),
+    "\\midrule",
+    row("", "$u$", 1:k),
+    paste0("\\cmidrule{3-", nc, "}"),
+    sapply(1:nrow(Be), function(p)
+      row(term_labels(rownames(Be)[p], latex = TRUE), paste0("$\\hat{\\beta}_{", p - 1, "u}$"),
+          ifelse(Be[p, ] == 0, "0", fmt(Be[p, ])))),
+    "\\midrule",
+    paste0("\\multicolumn{", nc, "}{l}{\\textbf{Transition probabilities from $\\tilde{u}$ to $u$}} \\\\"),
+    unlist(lapply(names(Pi), function(a)
+      c("\\midrule",
+        row(paste0("when $A_{ij} = ", a, "$"), "$\\tilde{u} \\backslash u$", 1:k),
+        paste0("\\cmidrule{3-", nc, "}"),
+        sapply(1:k, function(h) row("", h, fmt(Pi[[a]][h, ])))))),
+    "\\bottomrule",
+    "\\end{tabular}",
+    "\\end{table}")
+}
