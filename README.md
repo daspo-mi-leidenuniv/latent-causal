@@ -9,10 +9,6 @@ Liu Y, Fiocco M, Merks JHM & Spreafico M. A two-step causal inference approach f
 We cannot provide the original EE2012 trial data analysed due to confidentiality restrictions. 
 We therefore provide a pseudo-data dataset that allows researchers to reproduce the analyses, understand how the code should be run, and inspect how the results are generated, displayed, and interpreted.
 
-## Funding
-This work is part of the [PACT-ES project](https://sites.google.com/view/daspo/projects/pact-es), *PACT-ES: Personalised Approach to Chemotherapy Treatment for Ewing’s Sarcoma*, funded by [KiKa - Kinderen Kankervrij](https://kika.nl) (2024-grant 485).
-
-
 ## Description
 These analyses use the pseudo-data example (`./data/fake_data.csv`) and are intended to illustrate the implementation of the two-step approach.
 
@@ -41,6 +37,10 @@ These analyses use the pseudo-data example (`./data/fake_data.csv`) and are inte
 ## Software
 - R software.
 - Packages: dplyr, ggplot2, ipw, LMest, survival, tidyr.
+
+
+## Funding
+This work is part of the [PACT-ES project](https://sites.google.com/view/daspo/projects/pact-es), *PACT-ES: Personalised Approach to Chemotherapy Treatment for Ewing’s Sarcoma*, funded by [KiKa - Kinderen Kankervrij](https://kika.nl) (2024-grant 485).
   
 (Last update: November 24th, 2026)
 
