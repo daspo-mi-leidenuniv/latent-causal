@@ -2,7 +2,7 @@
 Code for implementing a two-step causal inference approach for survival outcomes under longitudinal latent confounding
 
 ### Reference
-Liu Y, Fiocco M & Spreafico M. A two-step causal inference approach for survival outcomes with longitudinal latent confounding: an application to treatment modifications in Ewing sarcoma. *[Submitted]*
+Liu Y, Fiocco M, Merks JHM & Spreafico M. A two-step causal inference approach for survival outcomes with longitudinal latent confounding: an application to treatment modifications in Ewing sarcoma. *[Submitted]*
 
 
 ### Data Availability
@@ -39,5 +39,5 @@ These analyses use the pseudo-data example (`./data/fake_data.csv`) and are inte
 - R software.
 - Packages: dplyr, ggplot2, ipw, LMest, survival, tidyr.
   
-(Last update: September 24th, 2026)
+(Last update: November 24th, 2026)
 
